@@ -7,13 +7,13 @@ Your project is to:
 * Come up with recommendations for the product team and the marketing team to improve conversion rate
 
 Results:
-* Logistic Regression (log-loss: 0.501)
-* Random Forest Classifier (log-loss: 0.468)
-* Gradient Boosting Classifier (log-loss: 0.485)
-* ADA Boosting Classifier (log-loss: 0.466)  <-- Lowest Log-Loss
+* Logistic Regression (log-loss: 0.468)
+* Random Forest Classifier (log-loss: 0.485)
+* Gradient Boosting Classifier (log-loss: 0.466) <-- Lowest Log-Loss
+* ADA Boosting Classifier (log-loss: 0.477)  
 
 Interpreting Feature Importance
-![Feature Importances in ADA model](data/feature_importances.png?raw=true "Feature Importances in ADA Model")
+![Feature Importances in Gradient Boosting model](data/feature_importances.png?raw=true "Feature Importances in Gradient Boosting Model")
 
 These feature importances, tell us how often the model chose to split on those features.  We gain the most information by splitting on 'total_pages_visited', so a business recommendation may include focusing resources on getting users to visit more pages. 
 
