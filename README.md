@@ -12,10 +12,10 @@ Results:
 * Gradient Boosting Classifier (log-loss: 0.466) <-- Lowest Log-Loss
 * ADA Boosting Classifier (log-loss: 0.477)  
 
-Interpreting Feature Importance
+Interpreting Feature Importance in Gradient Boosting Classifier
 ![Feature Importances in Gradient Boosting model](data/feature_importances.png?raw=true "Feature Importances in Gradient Boosting Model")
 
-These feature importances, tell us how often the model chose to split on those features.  We gain the most information by splitting on 'total_pages_visited', so a business recommendation may include focusing resources on getting users to visit more pages. 
+These feature importances, tell us how often the Gradient Boosting model chose to split on those features.  We gain the most information by splitting on 'total_pages_visited', so a business recommendation may include focusing resources on getting users to visit more pages. 
 
 Features:
 * country : user country based on the IP address
