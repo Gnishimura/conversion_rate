@@ -12,10 +12,14 @@ Results:
 * Gradient Boosting Classifier (log-loss: 0.466) <-- Lowest Log-Loss
 * ADA Boosting Classifier (log-loss: 0.477)  
 
-Interpreting Feature Importance in Gradient Boosting Classifier
+Interpreting Feature Importance 
 ![Feature Importances in Gradient Boosting model](data/feature_importances.png?raw=true "Feature Importances in Gradient Boosting Model")
 
-These feature importances, tell us how often the Gradient Boosting model chose to split on those features.  We gain the most information by splitting on 'total_pages_visited', so a business recommendation may include focusing resources on getting users to visit more pages. 
+These feature importances, from the Gradient Boosting model, can ONLY tell us how often the GB model chose to split on those features.  The model sees the biggest drop in entropy by splitting on 'total_pages_visited', but that should NOT immediately interpreted to mean that total pages visited is the most important feature for the business to focus on.  To get more interpretable results, let's look at the Beta coefficients of the logistic regression. 
+
+
+![Beta Coefficients in Logistic Regression Model](data/betas.png?raw=true "Beta Coefficients in Logistic Regression Model")
+
 
 Features:
 * country : user country based on the IP address
