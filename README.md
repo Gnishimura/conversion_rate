@@ -13,13 +13,18 @@ Results:
 * ADA Boosting Classifier (log-loss: 0.477)  
 
 Interpreting Feature Importance 
+Gradient Boosting Model
 ![Feature Importances in Gradient Boosting model](data/feature_importances.png?raw=true "Feature Importances in Gradient Boosting Model")
 
 These feature importances, from the Gradient Boosting model, can ONLY tell us how often the GB model chose to split on those features.  The model sees the biggest drop in entropy by splitting on 'total_pages_visited', but that should NOT immediately interpreted to mean that total pages visited is the most important feature for the business to focus on.  To get more interpretable results, let's look at the Beta coefficients of the logistic regression. 
 
-
+Logistic Model: Standardized Betas (to see relative importance)
 ![Beta Coefficients in Logistic Regression Model](data/betas.png?raw=true "Beta Coefficients in Logistic Regression Model")
 
+Logistic Model: Unstandardized Betas (to see true impact)
+![Beta Coefficients in Logistic Regression Model](data/unstandardized_betas.png?raw=true "Beta Coefficients in Logistic Regression Model")
+
+Here we get a little more information that the business can actually use.  
 
 Features:
 * country : user country based on the IP address
